@@ -1,4 +1,4 @@
-# SE-LIVE-TEMPLATE - Phase 1 - JavaScript
+# SE-NYC-TEMPLATE - Phase 1 - JavaScript
 ## Phase Level Objectives
 - [ ] Understand the fundamentals of JavaScript as a language, including functions and scope
 - [ ] Use data types and data structures to solve problems in JavaScript
