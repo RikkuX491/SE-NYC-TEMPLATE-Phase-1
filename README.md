@@ -10,7 +10,7 @@
 |No. | Lecture                          | Starter 	| Example / Lecture Code 	| Solution 	|
 |----|------------------------------	|:-----:	|--------	|---------	|
 |1 | JavaScript Fundamentals                      |[01_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/01_starter)|N/A|[01_solution](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/01_solution)|
-|2 | Functions & Scope                	          ||||
+|2 | Functions & Scope                	          |[02_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/02_starter)|N/A||
 |3 | JavaScript Data Structures & Array Iteration ||||
 |4 | DOM Manipulation                 	          ||||
 |5 | DOM Events                       	          ||||
