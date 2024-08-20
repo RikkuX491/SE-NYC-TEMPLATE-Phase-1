@@ -12,7 +12,7 @@
 |1 | JavaScript Fundamentals                      |[01_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/01_starter)|N/A||
 |2 | Functions & Scope                	          |[02_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/02_starter)|N/A||
 |3 | JavaScript Data Structures & Array Iteration |[03_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/03_starter)|N/A||
-|4 | DOM Manipulation                 	          ||N/A||
+|4 | DOM Manipulation                 	          |[04_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/04_starter)|N/A||
 |5 | DOM Events                       	          ||N/A||
 |6 | Communicating with the Server    	          ||N/A||
 |7 | POST Requests                    	          ||N/A||
