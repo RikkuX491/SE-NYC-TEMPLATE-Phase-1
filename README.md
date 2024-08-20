@@ -13,7 +13,7 @@
 |2 | Functions & Scope                	          |[02_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/02_starter)|N/A||
 |3 | JavaScript Data Structures & Array Iteration |[03_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/03_starter)|N/A||
 |4 | DOM Manipulation                 	          |[04_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/04_starter)|N/A||
-|5 | DOM Events                       	          ||N/A||
+|5 | DOM Events                       	          |[05_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/05_starter)|N/A||
 |6 | Communicating with the Server    	          ||N/A||
 |7 | POST Requests                    	          ||N/A||
 |8 | PATCH & DELETE Requests          	          ||N/A||
