@@ -11,10 +11,10 @@
 |----|------------------------------	|:-----:	|--------	|---------	|
 |1 | JavaScript Fundamentals                      |[01_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/01_starter)|N/A||
 |2 | Functions & Scope                	          |[02_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/02_starter)|N/A||
-|3 | JavaScript Data Structures & Array Iteration |[03_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/03_starter)|||
-|4 | DOM Manipulation                 	          ||||
-|5 | DOM Events                       	          ||||
-|6 | Communicating with the Server    	          ||||
-|7 | POST Requests                    	          ||||
-|8 | PATCH & DELETE Requests          	          ||||
-|9 | Communicating with External APIs 	          ||||
+|3 | JavaScript Data Structures & Array Iteration |[03_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/03_starter)|N/A||
+|4 | DOM Manipulation                 	          ||N/A||
+|5 | DOM Events                       	          ||N/A||
+|6 | Communicating with the Server    	          ||N/A||
+|7 | POST Requests                    	          ||N/A||
+|8 | PATCH & DELETE Requests          	          ||N/A||
+|9 | Communicating with External APIs 	          ||N/A||
