@@ -59,20 +59,31 @@ We've been asked to build a website for a new restaurant, Flatburger, that displ
 
 Today we will learn about JavaScript Data Structures and Array Iteration to accomplish some tasks related to displaying data on the website.
 
-1. Initialize a variable named `foodsArray` using `const` and assign it the value of an empty array `[]`
-2. Initialize a variable named `burgerObject` using `const` and assign it the value of an `object` that has a `name` key with the value of the `string` "Flatburger"
-3. Modify the `burgerObject` object using dot notation to add a `description` property to it with the value of the `string` "Our signature Flatburger which is a super delicious cheeseburger that'll leave you wanting another Flatburger! It's too good to be true!"
-4. Modify the `burgerObject` object using bracket notation to add a `price` property to it with the value of the `number` `14.99`
-5. Add the `burgerObject` to `foodsArray`
-6. Initialize a variable named `burgerObject2` using `const` and assign it the value of an `object` that has the following key and value pairs - `name: "Maple Bacon Burger"`, `description: "A great option for a breakfast burger or a great option for brunch if you're hungry enough to eat 2 of these burgers!"`, `price: 7.99`. Add the `burgerObject2` to `foodsArray`
-7. Create 3 more objects that have `name`, `description`, and `price` keys. Pick any values of your choosing in regards to the values for `name`, `description`, and `price` for each of the foods. Add these 3 objects to `foodsArray`
-8. Write a `for` loop that will loop over the `foodsArray` array and print the `name` of each of the food objects in the array using `console.log()`
-9. Write a `for...of` statement that will iterate over the `foodsArray` array and print the `description` of each of the food objects in the array using `console.log()`
-10. Iterate over the `foodsArray` array using the `.forEach()` array iterator method and print the `price` of each of the food objects in the array using `console.log()`
-11. Find the food that has the name "Flatburger" in the `foodsArray` array using the `.find()` array iterator method
-12. Find the foods that have a price less than `10.99` in the `foodsArray` array using the `.filter()` array iterator method
-13. Use the `.map()` array iterator method on `foodsArray` to `return` a new array that only contains the `price` for each of the foods
+1. Initialize a variable named `foodsArray` using `const` and assign it the value of an empty array `[]`.
 
+2. Initialize a variable named `burgerObject` using `const` and assign it the value of an `object` that has a `name` key with the value of the `string` "Flatburger".
+
+3. Modify the `burgerObject` object using dot notation to add a `description` property to it with the value of the `string` "Our signature Flatburger which is a super delicious cheeseburger that'll leave you wanting another Flatburger! It's too good to be true!".
+
+4. Modify the `burgerObject` object using bracket notation to add a `price` property to it with the value of the `number` `14.99`.
+
+5. Add `burgerObject` to the array stored in the `foodsArray` variable.
+
+6. Initialize a variable named `burgerObject2` using `const` and assign it the value of an `object` that has the following key and value pairs - `name: "Maple Bacon Burger"`, `description: "A great option for a breakfast burger or a great option for brunch if you're hungry enough to eat 2 of these burgers!"`, `price: 7.99`. Add `burgerObject2` to the array stored in the `foodsArray` variable.
+
+7. Create 3 more objects that have `name`, `description`, and `price` keys. Pick any values of your choosing in regards to the values for `name`, `description`, and `price` for each of the foods. Add these 3 objects to the array stored in the `foodsArray` variable.
+
+8. Write a `for` loop that will loop over the `foodsArray` array and print the `name` of each of the food objects in the array using `console.log()`.
+
+9. Write a `for...of` statement that will iterate over the `foodsArray` array and print the `description` of each of the food objects in the array using `console.log()`.
+
+10. Iterate over the `foodsArray` array using the `.forEach()` array iterator method and print the `price` of each of the food objects in the array using `console.log()`.
+
+11. Find the food that has the name "Flatburger" in the `foodsArray` array using the `.find()` array iterator method.
+
+12. Find the foods that have a price less than `10.99` in the `foodsArray` array using the `.filter()` array iterator method.
+
+13. Use the `.map()` array iterator method on `foodsArray` to `return` a new array that only contains the `price` for each of the foods.
 
 ## Arrays
 An `Array` is a list, with the items listed in a particular order, surrounded by square brackets `[]` and separated by commas:
