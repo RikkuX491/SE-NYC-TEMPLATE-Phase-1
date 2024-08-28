@@ -31,19 +31,19 @@
         </p>
 
         <form id="add-to-cart-form">
-            <input type="text" placeholder="Number to add..." id="number-to-add" name="number-to-add" />
+            <input type="number" step=".01" id="number-to-add" name="number-to-add" placeholder="Number to add..." />
             <input type="submit" value="Add to Cart" />
         </form>
 
         <!-- New Food Form -->
         <form id="new-food">
             <h4>Add New Food</h4>
-            <label for="name">Name: </label>
-            <input type="text" name="name" id="new-name" required />
-            <label for="image">Image: </label>
-            <input type="text" name="image" id="new-image" required />
-            <label for="description">Description: </label>
-            <textarea name="description" id="new-description" required ></textarea>
+            <label for="new-name">Name: </label>
+            <input type="text" id="new-name" name="name" autocomplete="off" />
+            <label for="new-image">Image: </label>
+            <input type="text" id="new-image" name="image" autocomplete="off" />
+            <label for="new-description">Description: </label>
+            <textarea id="new-description" name="description"></textarea>
             <input type="submit" value="Create" />
         </form>
     </body>
