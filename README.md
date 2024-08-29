@@ -23,4 +23,6 @@ We've been asked to build a website for a new restaurant, Flatburger, that displ
 
 We will continue to build our app for the Flatburger restaurant. We will use the `fetch()` method to make a `GET` request to an External API to include additional information obtained from the External API in our app. We will be using the concepts learned in this lecture to build out this app.
 
-1. Use the `fetch()` method to make a `GET` request to [https://api.coincap.io/v2/assets](https://api.coincap.io/v2/assets) to retrieve cryptocurrency data from the External API.
+1. Use the `fetch()` method to make a `GET` request to [https://api.coincap.io/v2/assets](https://api.coincap.io/v2/assets) to retrieve the data from the External API.
+
+2. Once you have retrieved the data from the External API, you will notice that the data is an `object` that contains two keys, `data` and `timestamp`. Access the value of the `data` key to get the cryptocurrency data. For example, if the API data is stored in a parameter named `apiData`, then `apiData.data` will allow you to access the value of the `data` key, which is the cryptocurrency data.
