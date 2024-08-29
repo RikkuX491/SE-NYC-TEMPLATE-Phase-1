@@ -7,6 +7,12 @@
       "description": "Our signature Flatburger which is a super delicious cheeseburger that'll leave you wanting another Flatburger! It's too good to be true!"
     },
     {
+      "id": 2,
+      "name": "Maple Bacon Burger",
+      "image": "assets/food/maple-bacon-burger.jpeg",
+      "description": "A great option for a breakfast burger or a great option for brunch if you're hungry enough to eat 2 of these burgers!"
+    },
+    {
       "id": 3,
       "name": "Mushroom Burger",
       "image": "assets/food/mushroom-burger.webp",
