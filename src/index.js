@@ -1,15 +1,5 @@
 const restaurantMenu = document.getElementById('restaurant-menu')
 
-fetch('http://localhost:3000/foods')
-.then(response => response.json())
-.then(foods => {
-    displayFoodDetails(foods[0])
-
-    foods.forEach(food => {
-        addFoodImageToRestaurantMenu(food)
-    })
-})
-
 function addFoodImageToRestaurantMenu(food){
     const imgElement = document.createElement('img')
     imgElement.src = food.image
@@ -18,11 +8,16 @@ function addFoodImageToRestaurantMenu(food){
     })
 
     imgElement.addEventListener('click', () => {
-
-        imgElement.remove()
-
         fetch(`http://localhost:3000/foods/${currentlyDisplayedFood.id}`, {
             method: "DELETE"
+        })
+        .then(response => {
+            if(response.ok){
+                imgElement.remove()
+            }
+            else{
+                alert(`Error: Unable to delete Food # ${currentlyDisplayedFood.id}`)
+            }
         })
     })
 
@@ -38,3 +33,15 @@ function displayFoodDetails(food){
     const foodDescriptionDisplayElement = document.getElementById('description-display')
     foodDescriptionDisplayElement.textContent = food.description
 }
+
+fetch('http://localhost:3000/foods')
+.then(response => response.json())
+.then(foods => {
+    displayFoodDetails(foods[0])
+
+    foods.forEach(food => {
+        addFoodImageToRestaurantMenu(food)
+    })
+})
+
+// write your code here
