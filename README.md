@@ -29,7 +29,9 @@ Write your solution code for these deliverables in the `index.js` file:
 
 1. Adding to the code starting on line 67 in `index.js`, inside of the `handleSubmit()` function, write the code to make a `PATCH` request to persist changes to update the `number_in_cart` for the displayed food when the `Add to Cart` button is clicked. The food data for the foods that are currently in the database can be viewed in the `db.json` file. Implement an optimistic rendering approach for the `PATCH` request.
 
-2. Make a `DELETE` request to persist changes to delete the food from the database when an image is clicked within the `restaurant-menu`
+2. Refactor your code to implement a pessimistic rendering approach for the `PATCH` request.
+
+3. Make a `DELETE` request to persist changes to delete the food from the database when an image is clicked within the `restaurant-menu`
 
 ## PATCH (Update)
 
