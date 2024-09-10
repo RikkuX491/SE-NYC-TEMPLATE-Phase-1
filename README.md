@@ -31,7 +31,7 @@ Write your solution code for these deliverables in the `index.js` file:
 
 2. Refactor your code to implement a pessimistic rendering approach for the `PATCH` request.
 
-3. Make a `DELETE` request to persist changes to delete the food from the database when an image is clicked within the `restaurant-menu`
+3. Adding to the code starting on line 22 in `index.js`, inside of the callback function in `imgElement.addEventListener()`, write the code to make a `DELETE` request to persist changes to delete the food from the database when an image is clicked within the `restaurant-menu`. The food data for the foods that are currently in the database can be viewed in the `db.json` file. Implement an optimistic rendering approach for the `DELETE` request.
 
 ## PATCH (Update)
 
