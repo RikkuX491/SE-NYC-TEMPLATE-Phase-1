@@ -64,6 +64,8 @@ function addToCart(event){
     const sum = Number(numberInCartCountElement.textContent) + Number(numberToAddInputElement.value)
     numberInCartCountElement.textContent = sum
 
+    // write your code here
+
     event.target.reset()
 }
 
