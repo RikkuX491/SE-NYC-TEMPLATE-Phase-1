@@ -24,7 +24,7 @@ We've been asked to build a website for a new restaurant, Flatburger, that displ
 
 We will be using the `fetch()` function to make a `POST` request to the JSON server in response to form submission to add a new food object to the database in addition to updating the frontend (our webpage) to include the data for the new food. We will be using the concepts learned in this lecture to build out this app.
 
-1. Adding to the code starting on line 48, inside of the callback function in `newFoodForm.addEventListener()`, write the code to make a `POST` request to send the data stored in the `newFood` variable to add a new food to the database. The food data can be viewed in the `db.json` file. Implement an optimistic rendering approach for the `POST` request.
+1. Adding to the code starting on line 48, inside of the `handleSubmit()` function, write the code to make a `POST` request to send the data stored in the `newFood` variable to add a new food to the database. The food data for the foods that are currently in the database can be viewed in the `db.json` file. Implement an optimistic rendering approach for the `POST` request.
 2. Refactor your code to implement a pessimistic rendering approach for the `POST` request.
 
 ## POST (Create)
