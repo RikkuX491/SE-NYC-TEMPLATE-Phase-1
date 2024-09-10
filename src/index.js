@@ -20,12 +20,15 @@ function addFoodImageToRestaurantMenu(food){
 }
 
 function displayFoodDetails(food){
-    const foodDetailImageElement = document.getElementsByClassName('detail-image')[0]
+    const foodDetailImageElement = document.querySelector('.detail-image')
     foodDetailImageElement.src = food.image
-    const foodNameElement = document.getElementsByClassName('name')[0]
+
+    const foodNameElement = document.querySelector('.name')
     foodNameElement.textContent = food.name
+
     const foodDescriptionDisplayElement = document.getElementById('description-display')
     foodDescriptionDisplayElement.textContent = food.description
+
     const numberInCartCountElement = document.getElementById('number-in-cart-count')
     numberInCartCountElement.textContent = food.number_in_cart
 }
