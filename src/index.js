@@ -13,6 +13,12 @@ function addFoodImageToRestaurantMenu(food){
         displayFoodDetails(food)
     })
     restaurantMenu.appendChild(imgElement)
+
+    imgElement.addEventListener('click', () => {
+        imgElement.remove()
+
+        // write your code here
+    })
 }
 
 function displayFoodDetails(food){
