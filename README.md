@@ -19,13 +19,15 @@ Test your server by visiting this route in the browser:
 
 Then, open the `index.html` file on your browser to run the application.
 
-## Deliverables 
+## Deliverables
 
 We've been asked to build a website for a new restaurant, Flatburger, that displays a menu of food served at the restaurant.
 
 We will be using the `fetch()` function to make a `PATCH` request to the JSON server in response to form submission to update the value for `number_in_cart` for a food object in the database in addition to updating the frontend (our webpage) to update the data for the `number_in_cart` for the food. We will also be using the `fetch()` function to make a `DELETE` request to the JSON server in response to a `click` event to delete a food from the database in addition to updating the frontend (our webpage) to remove the food from the `restaurant-menu`. We will be using the concepts learned in this lecture to build out this app.
 
-1. Make a `PATCH` request to persist changes to update the `number_in_cart` for the displayed food when the `Add to Cart` button is clicked.
+Write your solution code for these deliverables in the `index.js` file:
+
+1. Adding to the code starting on line 67 in `index.js`, inside of the `handleSubmit()` function, write the code to make a `PATCH` request to persist changes to update the `number_in_cart` for the displayed food when the `Add to Cart` button is clicked. The food data for the foods that are currently in the database can be viewed in the `db.json` file. Implement an optimistic rendering approach for the `PATCH` request.
 
 2. Make a `DELETE` request to persist changes to delete the food from the database when an image is clicked within the `restaurant-menu`
 
