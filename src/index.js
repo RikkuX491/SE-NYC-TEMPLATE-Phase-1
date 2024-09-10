@@ -6,6 +6,8 @@ const newNameInputElement = document.getElementById('new-name')
 const newImageInputElement = document.getElementById('new-image')
 const newDescriptionInputElement = document.getElementById('new-description')
 
+let currentlyDisplayedFoodId
+
 function addFoodImageToRestaurantMenu(food){
     const imgElement = document.createElement('img')
     imgElement.src = food.image
@@ -17,7 +19,7 @@ function addFoodImageToRestaurantMenu(food){
     imgElement.addEventListener('click', () => {
         imgElement.remove()
 
-        // write your code here
+        // write your code here for Deliverable # 3
     })
 }
 
@@ -28,6 +30,8 @@ function displayFoodDetails(food){
 
     const numberInCartCountElement = document.getElementById('number-in-cart-count')
     numberInCartCountElement.textContent = food.number_in_cart
+
+    currentlyDisplayedFoodId = food.id
 }
 
 function addNewFood(event){
@@ -70,7 +74,7 @@ function addToCart(event){
     const sum = Number(numberInCartCountElement.textContent) + Number(numberToAddInputElement.value)
     numberInCartCountElement.textContent = sum
 
-    // write your code here
+    // write your code here for Deliverable # 1
 
     event.target.reset()
 }
