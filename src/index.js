@@ -1,12 +1,10 @@
 const restaurantMenu = document.getElementById('restaurant-menu')
-
-fetch('http://localhost:3000/foods')
-.then(response => response.json())
-.then(foods => {
-    displayFoodDetails(foods[0])
-
-    foods.forEach(addFoodImageToRestaurantMenu)
-})
+const foodDetailImageElement = document.querySelector('.detail-image')
+const foodNameElement = document.querySelector('.name')
+const foodDescriptionDisplayElement = document.getElementById('description-display')
+const newNameInputElement = document.getElementById('new-name')
+const newImageInputElement = document.getElementById('new-image')
+const newDescriptionInputElement = document.getElementById('new-description')
 
 function addFoodImageToRestaurantMenu(food){
     const imgElement = document.createElement('img')
@@ -18,13 +16,8 @@ function addFoodImageToRestaurantMenu(food){
 }
 
 function displayFoodDetails(food){
-    const foodDetailImageElement = document.querySelector('.detail-image')
     foodDetailImageElement.src = food.image
-
-    const foodNameElement = document.querySelector('.name')
     foodNameElement.textContent = food.name
-
-    const foodDescriptionDisplayElement = document.getElementById('description-display')
     foodDescriptionDisplayElement.textContent = food.description
 
     const numberInCartCountElement = document.getElementById('number-in-cart-count')
@@ -33,10 +26,6 @@ function displayFoodDetails(food){
 
 function addNewFood(event){
     event.preventDefault()
-
-    const newNameInputElement = document.getElementById('new-name')
-    const newImageInputElement = document.getElementById('new-image')
-    const newDescriptionInputElement = document.getElementById('new-description')
 
     const newFood = {
         name: newNameInputElement.value,
@@ -66,16 +55,28 @@ function addNewFood(event){
     event.target.reset()
 }
 
+function addToCart(event){
+    event.preventDefault()
+
+    const numberToAddInputElement = document.getElementById('number-to-add')
+    const numberInCartCountElement = document.getElementById('number-in-cart-count')
+
+    const sum = Number(numberInCartCountElement.textContent) + Number(numberToAddInputElement.value)
+    numberInCartCountElement.textContent = sum
+
+    event.target.reset()
+}
+
+fetch('http://localhost:3000/foods')
+.then(response => response.json())
+.then(foods => {
+    displayFoodDetails(foods[0])
+
+    foods.forEach(addFoodImageToRestaurantMenu)
+})
+
 const newFoodForm = document.getElementById('new-food')
 newFoodForm.addEventListener('submit', addNewFood)
 
 const addToCartForm = document.getElementById('add-to-cart-form')
-addToCartForm.addEventListener('submit', (event) => {
-    event.preventDefault()
-    const numberToAddInputElement = document.getElementById('number-to-add')
-    const numberInCartCountElement = document.getElementById('number-in-cart-count')
-    const sum = Number(numberInCartCountElement.textContent) + Number(numberToAddInputElement.value)
-    numberInCartCountElement.textContent = sum
-
-    addToCartForm.reset()
-})
+addToCartForm.addEventListener('submit', addToCart)
