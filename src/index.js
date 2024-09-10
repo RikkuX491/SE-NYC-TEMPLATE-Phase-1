@@ -5,9 +5,7 @@ fetch('http://localhost:3000/foods')
 .then(foods => {
     displayFoodDetails(foods[0])
 
-    foods.forEach(food => {
-        addFoodImageToRestaurantMenu(food)
-    })
+    foods.forEach(addFoodImageToRestaurantMenu)
 })
 
 function addFoodImageToRestaurantMenu(food){
