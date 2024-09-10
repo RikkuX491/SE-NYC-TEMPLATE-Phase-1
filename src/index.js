@@ -31,8 +31,7 @@ function displayFoodDetails(food){
     numberInCartCountElement.textContent = food.number_in_cart
 }
 
-const newFoodForm = document.getElementById('new-food')
-newFoodForm.addEventListener('submit', (event) => {
+function addNewFood(event){
     event.preventDefault()
 
     const newNameInputElement = document.getElementById('new-name')
@@ -64,8 +63,11 @@ newFoodForm.addEventListener('submit', (event) => {
         }
     })
 
-    newFoodForm.reset()
-})
+    event.target.reset()
+}
+
+const newFoodForm = document.getElementById('new-food')
+newFoodForm.addEventListener('submit', addNewFood)
 
 const addToCartForm = document.getElementById('add-to-cart-form')
 addToCartForm.addEventListener('submit', (event) => {
