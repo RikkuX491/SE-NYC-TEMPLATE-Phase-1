@@ -1,14 +1,20 @@
 const restaurantMenu = document.getElementById('restaurant-menu')
+const foodDetailImageElement = document.querySelector('.detail-image')
+const foodNameElement = document.querySelector('.name')
+const foodDescriptionDisplayElement = document.getElementById('description-display')
+
+let currentlyDisplayedFoodId
 
 function addFoodImageToRestaurantMenu(food){
     const imgElement = document.createElement('img')
     imgElement.src = food.image
+
     imgElement.addEventListener('mouseover', () => {
         displayFoodDetails(food)
     })
 
     imgElement.addEventListener('click', () => {
-        fetch(`http://localhost:3000/foods/${currentlyDisplayedFood.id}`, {
+        fetch(`http://localhost:3000/foods/${currentlyDisplayedFoodId}`, {
             method: "DELETE"
         })
         .then(response => {
@@ -16,7 +22,7 @@ function addFoodImageToRestaurantMenu(food){
                 imgElement.remove()
             }
             else{
-                alert(`Error: Unable to delete Food # ${currentlyDisplayedFood.id}`)
+                alert(`Error: Unable to delete Food # ${currentlyDisplayedFoodId}`)
             }
         })
     })
@@ -25,13 +31,11 @@ function addFoodImageToRestaurantMenu(food){
 }
 
 function displayFoodDetails(food){
-    currentlyDisplayedFood = food
-    const foodDetailImageElement = document.getElementsByClassName('detail-image')[0]
     foodDetailImageElement.src = food.image
-    const foodNameElement = document.getElementsByClassName('name')[0]
     foodNameElement.textContent = food.name
-    const foodDescriptionDisplayElement = document.getElementById('description-display')
     foodDescriptionDisplayElement.textContent = food.description
+
+    currentlyDisplayedFoodId = food.id
 }
 
 fetch('http://localhost:3000/foods')
@@ -39,9 +43,7 @@ fetch('http://localhost:3000/foods')
 .then(foods => {
     displayFoodDetails(foods[0])
 
-    foods.forEach(food => {
-        addFoodImageToRestaurantMenu(food)
-    })
+    foods.forEach(addFoodImageToRestaurantMenu)
 })
 
 // write your code here
