@@ -3,8 +3,6 @@ const foodDetailImageElement = document.querySelector('.detail-image')
 const foodNameElement = document.querySelector('.name')
 const foodDescriptionDisplayElement = document.getElementById('description-display')
 
-let currentlyDisplayedFoodId
-
 function addFoodImageToRestaurantMenu(food){
     const imgElement = document.createElement('img')
     imgElement.src = food.image
@@ -14,7 +12,7 @@ function addFoodImageToRestaurantMenu(food){
     })
 
     imgElement.addEventListener('click', () => {
-        fetch(`http://localhost:3000/foods/${currentlyDisplayedFoodId}`, {
+        fetch(`http://localhost:3000/foods/${food.id}`, {
             method: "DELETE"
         })
         .then(response => {
@@ -22,7 +20,7 @@ function addFoodImageToRestaurantMenu(food){
                 imgElement.remove()
             }
             else{
-                alert(`Error: Unable to delete Food # ${currentlyDisplayedFoodId}`)
+                alert(`Error: Unable to delete Food # ${food.id}`)
             }
         })
     })
@@ -34,8 +32,6 @@ function displayFoodDetails(food){
     foodDetailImageElement.src = food.image
     foodNameElement.textContent = food.name
     foodDescriptionDisplayElement.textContent = food.description
-
-    currentlyDisplayedFoodId = food.id
 }
 
 fetch('http://localhost:3000/foods')
