@@ -117,3 +117,7 @@ form h4 {
     border-radius: 10px;
     padding:10px;
 }
+
+#reverse-button {
+    margin-top: 1rem;
+}
