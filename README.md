@@ -18,4 +18,4 @@
 |7 | POST Requests                    	          |[07_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/07_starter)|||
 |8 | PATCH & DELETE Requests          	          |[08_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/08_starter)|||
 |9 | Communicating with External APIs 	          |[09_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/09_starter)|||
-|10 | Algorithmic Problem Solving 	          ||||
+|10 | Algorithmic Problem Solving 	              |[10_starter](https://github.com/RikkuX491/SE-NYC-TEMPLATE-Phase-1/tree/10_starter)|||
