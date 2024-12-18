@@ -6,6 +6,8 @@
 - Outline the steps for solving problems using algorithms
 - Define Big O notation
 - Calculate time and space complexity using Big O notation
+- Identify common Big O runtimes: constant, linear, quadratic and logarithmic
+- Research the Big O runtime of built-in methods
 
 ## Setup
 
@@ -241,6 +243,15 @@ function containsAverage(array) {
 
 Counting the steps here, we end up with `O(n * 2)`. Even though it takes twice as long as our first algorithm, we can still remove the constants and end up with `O(n)`. Since we're looking for a high-level summary, this approximation still gives us a good sense as to how well our algorithm will scale to larger and larger inputs when compared to some other common Big O runtimes.
 
+These are four of the most common Big O formulas, along with examples:
+
+| Big O    | Name        | Example                                     |
+| -------- | ----------- | ------------------------------------------- |
+| O(1)     | Constant    | Accessing a value in an object by its key   |
+| O(log n) | Logarithmic | Binary search                               |
+| O(n)     | Linear      | Iterating through every element in an array |
+| O(n²)    | Quadratic   | Nested iteration                            |
+
 ## Space Complexity With Big O
 
 We've spent some time discussing how to calculate time complexity (how long our function will take to run) using Big O notation, but there's another consideration: space complexity (how much memory our function will use).
@@ -285,3 +296,30 @@ We only allocate memory for the inputs and the return value:
 In this case, we can summarize the space complexity as constant: `O(1)`.
 
 In many cases, you can improve an algorithm's space complexity by sacrificing its time complexity, and vice-versa; navigating these tradeoffs is one of the keys to being a good developer, and it comes with practice.
+
+## Big O of Built-In Methods
+
+One major factor to consider when determining the runtime complexity of an algorithm is **how well a language's built-in methods perform**. For example, looking up a key on an object is a O(1) operation.
+
+When we make assertions like this, we're summarizing some of the lower-level work that JavaScript is doing under the hood when it comes to certain common operations, like looking up a key on an object.
+
+Here is a general summary of common runtimes for operations involving objects:
+
+| Method                                           | Big O |
+| ------------------------------------------------ | ----- |
+| Access (looking for a value with a known key)    | O(1)  |
+| Search (looking for a value without a known key) | O(n)  |
+| Insertion (adding a value at a known key)        | O(1)  |
+| Deletion (removing a value at a known key)       | O(1)  |
+
+Arrays also have certain runtime costs for common operations, which we can summarize as follows:
+
+| Method                                    | Big O |
+| ----------------------------------------- | ----- |
+| Access                                    | O(1)  |
+| Search (`.indexOf()`)                     | O(n)  |
+| Insertion: End (`.push()`)                | O(1)  |
+| Insertion: Beginning (`.unshift()`)       | O(n)  |
+| Deletion: End (`.pop()`)                  | O(1)  |
+| Deletion: Beginning (`.shift()`)          | O(n)  |
+| Creation from existing array (`.slice()`) | O(n)  |
