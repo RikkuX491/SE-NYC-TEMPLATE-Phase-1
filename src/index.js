@@ -3,6 +3,7 @@ const detailImageElement = document.querySelector('.detail-image')
 const nameElement = document.querySelector('.name')
 const descriptionDisplayElement = document.getElementById('description-display')
 
+// Deliverable # 1 solution code goes here
 function displayFoodDetails(food){
     detailImageElement.src = food.image
     nameElement.textContent = food.name
@@ -14,7 +15,8 @@ function addFoodImageToRestaurantMenu(food){
     imgElement.src = food.image
 
     imgElement.addEventListener('mouseover', () => {
-        displayFoodDetails(food)
+        // displayFoodDetails(food)
+        // Deliverable # 2 solution code goes here
     })
 
     imgElement.addEventListener('click', () => {
@@ -30,7 +32,8 @@ function addFoodImageToRestaurantMenu(food){
 fetch('http://localhost:3000/foods')
 .then(response => response.json())
 .then(foods => {
-    displayFoodDetails(foods[0])
+    // Deliverable # 3 solution code goes here
+    // displayFoodDetails(foods[0])
 
     foods.forEach(addFoodImageToRestaurantMenu)
 })

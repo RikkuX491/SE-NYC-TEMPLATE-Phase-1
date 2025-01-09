@@ -27,6 +27,12 @@ Then, open the `index.html` file on your browser to run the application.
 
 ## Deliverables
 
+Write your solution code in the `index.js` file in the `src` folder.
+
 We've been asked to build a website for a new restaurant, Flatburger, that displays a menu of food served at the restaurant.
 
 We will continue to build our app for the Flatburger restaurant. We will update one of our functions and use our knowledge of Context in JavaScript to take a different approach to send data to the function. We will be using the concepts learned in this lecture to build out this app.
+
+1. Modify the `displayFoodDetails()` function as follows:
+   - The `displayFoodDetails()` should not have any parameters.
+   - All references to the `food` parameter should be replaced with the `this` keyword (since the food `object` should be accessible as context within the `displayFoodDetails()` function rather than passing it as an argument).
