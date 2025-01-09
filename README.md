@@ -35,8 +35,8 @@ We will continue to build our app for the Flatburger restaurant. We will update 
 
 1. Modify the `displayFoodDetails()` function as follows:
    - The `displayFoodDetails()` should not have any parameters.
-   - All references to the `food` parameter should be replaced with the `this` keyword (since the food `object` should be accessible as context within the `displayFoodDetails()` function rather than passing it as an argument).
+   - All references to `food` within the `displayFoodDetails()` function should be replaced with the `this` keyword (since the food `object` should be accessible as context within the `displayFoodDetails()` function rather than passing it as an argument).
 
 2. After the food data is retrieved from the server, the `call()` method should be called on `displayFoodDetails` and the first food retrieved from the server (i.e.: the first food `object` from the `foods` parameter) should be passed into the `call()` method so that the food `object` will be accessible via the `this` keyword within the `displayFoodDetails()` function.
 
-3. In response to the `mouseover` event, the `call()` method should be called on `displayFoodDetails` and `food` should be passed into the `call()` method so that the `object` stored in `food` will be accessible via the `this` keyword within the `displayFoodDetails()` function.
+3. In response to the `mouseover` event for `imgElement`, the `call()` method should be called on `displayFoodDetails` and `food` should be passed into the `call()` method so that the `object` stored in `food` will be accessible via the `this` keyword within the `displayFoodDetails()` function.
