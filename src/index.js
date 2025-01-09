@@ -51,19 +51,19 @@ const foods = [
     }
 ]
 
-const restaurantMenu = document.getElementById('restaurant-menu')
+const restaurantMenuElement = document.getElementById('restaurant-menu')
 
 foods.forEach(food => {
-    const foodImage = document.createElement('img')
-    foodImage.src = food.image
-    restaurantMenu.appendChild(foodImage)
+    const foodImageElement = document.createElement('img')
+    foodImageElement.src = food.image
+    restaurantMenuElement.appendChild(foodImageElement)
 })
 
-const foodDetailImage = document.querySelector('.detail-image')
-foodDetailImage.src = foods[0].image
+const detailImageElement = document.querySelector('.detail-image')
+detailImageElement.src = foods[0].image
 
-const foodName = document.querySelector('.name') 
-foodName.textContent = foods[0].name
+const nameElement = document.querySelector('.name') 
+nameElement.textContent = foods[0].name
 
-const foodDescriptionDisplay = document.querySelector('#description-display')
-foodDescriptionDisplay.textContent = foods[0].description
+const descriptionDisplayElement = document.getElementById('description-display')
+descriptionDisplayElement.textContent = foods[0].description
