@@ -15,8 +15,7 @@ function addFoodImageToRestaurantMenu(food){
     imgElement.src = food.image
 
     imgElement.addEventListener('mouseover', () => {
-        // displayFoodDetails(food)
-        // Deliverable # 2 solution code goes here
+        // Deliverable # 3 solution code goes here
     })
 
     imgElement.addEventListener('click', () => {
@@ -32,8 +31,7 @@ function addFoodImageToRestaurantMenu(food){
 fetch('http://localhost:3000/foods')
 .then(response => response.json())
 .then(foods => {
-    // Deliverable # 3 solution code goes here
-    // displayFoodDetails(foods[0])
+    // Deliverable # 2 solution code goes here
 
     foods.forEach(addFoodImageToRestaurantMenu)
 })
