@@ -10,3 +10,17 @@
 - Learn how to avoid the lost context bug
 - Learn how to regain access to the lost context
 - Use an arrow function expression to create a function without its own context
+
+## Setup
+
+Run this command to get the backend started:
+
+```sh
+json-server --watch db.json
+```
+
+Test your server by visiting this route in the browser:
+
+[http://localhost:3000/foods](http://localhost:3000/foods)
+
+Then, open the `index.html` file on your browser to run the application.
