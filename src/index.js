@@ -1,7 +1,13 @@
-const restaurantMenu = document.getElementById('restaurant-menu')
-const foodDetailImageElement = document.querySelector('.detail-image')
-const foodNameElement = document.querySelector('.name')
-const foodDescriptionDisplayElement = document.getElementById('description-display')
+const restaurantMenuElement = document.getElementById('restaurant-menu')
+const detailImageElement = document.querySelector('.detail-image')
+const nameElement = document.querySelector('.name')
+const descriptionDisplayElement = document.getElementById('description-display')
+
+function displayFoodDetails(food){
+    detailImageElement.src = food.image
+    nameElement.textContent = food.name
+    descriptionDisplayElement.textContent = food.description
+}
 
 function addFoodImageToRestaurantMenu(food){
     const imgElement = document.createElement('img')
@@ -12,26 +18,13 @@ function addFoodImageToRestaurantMenu(food){
     })
 
     imgElement.addEventListener('click', () => {
+        imgElement.remove()
         fetch(`http://localhost:3000/foods/${food.id}`, {
             method: "DELETE"
         })
-        .then(response => {
-            if(response.ok){
-                imgElement.remove()
-            }
-            else{
-                alert(`Error: Unable to delete Food # ${food.id}`)
-            }
-        })
     })
 
-    restaurantMenu.appendChild(imgElement)
-}
-
-function displayFoodDetails(food){
-    foodDetailImageElement.src = food.image
-    foodNameElement.textContent = food.name
-    foodDescriptionDisplayElement.textContent = food.description
+    restaurantMenuElement.appendChild(imgElement)
 }
 
 fetch('http://localhost:3000/foods')
@@ -41,5 +34,3 @@ fetch('http://localhost:3000/foods')
 
     foods.forEach(addFoodImageToRestaurantMenu)
 })
-
-// write your code here
